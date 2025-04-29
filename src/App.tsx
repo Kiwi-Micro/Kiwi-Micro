@@ -1,25 +1,12 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import GlobalNavBar from "./components/GlobalNavBar";
-import GlobalFooter from "./components/GlobalFooter";
-import Index from "./pages/Index";
-import Contact from "./pages/Contact";
+import logo from "./assets/img/logo.png";
+import "./assets/main.css";
 
 function App() {
 	return (
-		<div>
-			<Router>
-				<GlobalNavBar blur={true} />
-				<Switch>
-					<Route exact path="/">
-						<Index />
-					</Route>
-					<Route path="/contact">
-						<Contact />
-					</Route>
-				</Switch>
-			</Router>
-			<GlobalFooter />
+		<div className="main">
+			<img src={logo} alt="Kiwi Micro Logo" width="200" height="200" />
+			<h1>New Site Comming Soon!</h1>
 		</div>
 	);
 }
